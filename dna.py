@@ -93,8 +93,6 @@ if __name__ == "__main__":
 
 
     model.fit(trainData, labels, batch_size=32, epochs=150)
-    scores = model.evaluate(trainData, labels)
-    print("\n%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
     prediction = model.predict(testData)
     prediction = prediction.reshape(400)
     pred = []
